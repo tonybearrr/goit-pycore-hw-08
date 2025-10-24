@@ -11,16 +11,15 @@ from functools import wraps
 def input_error(func):
     """
     Decorator to handle common input errors and provide user-friendly messages.
-    
+
     Handles the following exceptions:
     - ValueError: Returns "Enter the argument for the command"
     - KeyError: Returns "Contact not found"
     - IndexError: Returns "Enter the argument for the command"
     - AttributeError: Returns "Contact not found"
-    
     Args:
         func: Function to be decorated
-        
+
     Returns:
         function: Decorated function with error handling
     """

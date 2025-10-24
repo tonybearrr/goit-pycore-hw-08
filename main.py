@@ -8,7 +8,8 @@ phone numbers and birthdays.
 
 from handlers import (
     add_contact, update_contact, get_all_contacts, get_one_contact,
-    delete_contact, add_birthday, show_birthday, birthdays, load_data, save_data
+    delete_contact, add_birthday, show_birthday, birthdays, load_data,
+    save_data
 )
 from decorators import input_error
 
@@ -17,10 +18,10 @@ from decorators import input_error
 def parse_input(user_input):
     """
     Parse user input into command and arguments.
-    
+
     Args:
         user_input (str): Raw user input string
-        
+
     Returns:
         tuple: Command and arguments (cmd, *args)
     """
@@ -32,7 +33,7 @@ def parse_input(user_input):
 def main():
     """
     Main function that runs the address book bot.
-    
+
     Creates an AddressBook instance and runs the main command loop,
     processing user commands until 'close' or 'exit' is entered.
     """
@@ -53,7 +54,7 @@ def main():
             print(add_contact(args, book))
         elif command == "change":
             print(update_contact(args, book))
-        elif command == "all": 
+        elif command == "all":
             print(get_all_contacts(book))
         elif command == "phone":
             print(get_one_contact(args, book))
